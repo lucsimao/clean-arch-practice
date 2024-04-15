@@ -1,9 +1,9 @@
-import { Owner } from './Owner';
+import { Client } from './Client';
 
 export interface Item {
   name: string;
   price: string;
-  owner: Owner;
+  owner: Client;
 }
 
 export enum Status {
@@ -15,6 +15,7 @@ export enum Status {
 
 export interface Order {
   id: number;
+  table: number;
   status: Status;
   items: Item[];
   restaurantId: string;
