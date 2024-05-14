@@ -63,4 +63,3 @@ export const makeCreateOrderUserStub =
 export const makeCreateOrder = (): jest.Mocked<CreateOrder> => ({
   execute: jest.fn().mockResolvedValue(makeFakeCreateOrder()),
 });
-
