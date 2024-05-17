@@ -2,8 +2,8 @@ import {
   makeCreateOrderStub,
   makeCreateOrderControllerInput,
   makeFakeCreateOrderUseCaseOutput,
-} from '../../application-business-rules/use-cases/__tests__/helpers/test-helper';
-import { CreateOrderController } from './CreateOrderController';
+} from '../../../application-business-rules/use-cases/__tests__/helpers/test-helper';
+import { CreateOrderController } from '../CreateOrderController';
 
 const makeSut = () => {
   const createOrderStub = makeCreateOrderStub();

@@ -2,8 +2,8 @@ import {
   makeCreateOrderRepositoryStub,
   makeFakeCreateOrderUseCaseInput,
   makeFakeCreateOrderUseCaseOutput,
-} from './__tests__/helpers/test-helper';
-import { CreateOrderUseCase } from './CreateOrderUseCase';
+} from './helpers/test-helper';
+import { CreateOrderUseCase } from '../CreateOrderUseCase';
 
 const makeSut = () => {
   const createOrderRepository = makeCreateOrderRepositoryStub();
