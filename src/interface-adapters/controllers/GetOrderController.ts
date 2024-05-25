@@ -10,8 +10,13 @@ export type GetOrderControllerOutput = GetOrderOutput[];
 export class GetOrderController {
   constructor(private readonly getOrderUseCase: GetOrder) {}
 
-  public async get(): Promise<GetOrderControllerOutput> {
+  public async getAll(): Promise<GetOrderControllerOutput> {
     const result = await this.getOrderUseCase.getAllOrder();
+    return result;
+  }
+
+  public async getById(id: number): Promise<GetOrderOutput> {
+    const result = await this.getOrderUseCase.getById(id);
     return result;
   }
 }

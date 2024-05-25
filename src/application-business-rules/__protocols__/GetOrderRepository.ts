@@ -8,4 +8,5 @@ export type GetOrderRepositoryOutput = GetOrderOutput;
 
 export interface GetOrderRepository {
   getAll(): Promise<GetOrderRepositoryOutput[]>;
+  getById(id: number): Promise<GetOrderRepositoryOutput>;
 }

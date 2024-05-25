@@ -15,4 +15,9 @@ export class GetOrderUseCase implements GetOrder {
     const result = await this.getOrderRepository.getAll();
     return result;
   }
+
+  public async getById(id: number): Promise<GetOrderOutput> {
+    const result = await this.getOrderRepository.getById(id);
+    return result;
+  }
 }
