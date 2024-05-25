@@ -39,7 +39,7 @@ export const makeCreateOrderStub = (): jest.Mocked<CreateOrder> => ({
 
 export const makeGetOrderStub = (): jest.Mocked<GetOrder> => ({
   getAllOrder: jest.fn().mockResolvedValue(makeFakeCreateOrderList()),
-  getById: jest.fn().mockResolvedValue(undefined),
+  getOrderById: jest.fn().mockResolvedValue(makeFakeCreateOrderUseCaseInput()),
 });
 export const makeFakeCreateOrderUseCaseOutput =
   (): jest.Mocked<CreateOrderUseCaseOutput> => {

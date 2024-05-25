@@ -16,7 +16,7 @@ export class GetOrderController {
   }
 
   public async getById(id: number): Promise<GetOrderOutput> {
-    const result = await this.getOrderUseCase.getById(id);
+    const result = await this.getOrderUseCase.getOrderById(id);
     return result;
   }
 }

@@ -55,4 +55,15 @@ describe(GetOrderUseCase.name, () => {
       await expect(promise).rejects.toThrow(new Error('repository error'));
     });
   });
+  describe(`When ${GetOrderUseCase.prototype.getOrderById.name} is called`, () => {
+    it('should call repository with right params', async () => {
+      const { sut, getOrderRepository } = makeSut();
+      const idFake = 777;
+      const getOneSpy = getOrderRepository.getById;
+
+      await sut.getOrderById(idFake);
+
+      expect(getOneSpy).toBeCalledWith(777);
+    });
+  });
 });

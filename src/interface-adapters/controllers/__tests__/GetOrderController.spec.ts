@@ -44,7 +44,7 @@ describe(`${GetOrderController.name}`, () => {
     it('should call  with right params', async () => {
       const { sut, getOrderStub } = makeSut();
       const idFake = 777;
-      const getByIdSpy = getOrderStub.getById;
+      const getByIdSpy = getOrderStub.getOrderById;
 
       await sut.getById(idFake);
 

@@ -5,5 +5,5 @@ export type GetOrderOutput = Order[];
 
 export interface GetOrder {
   getAllOrder(): Promise<GetOrderOutput[]>;
-  getById(id: number): Promise<GetOrderOutput>;
+  getOrderById(id: number): Promise<GetOrderOutput>;
 }
