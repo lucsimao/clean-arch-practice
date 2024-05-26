@@ -12,12 +12,8 @@ import {
 } from '../../CreateOrderUseCase';
 
 import { GetOrderRepository } from '../../../__protocols__/GetOrderRepository';
-import {
-  GetOrder,
-  GetOrderInput,
-  GetOrderOutput,
-} from '../../../../enterprise-business-rules/__protocols__/GetProcess';
-import { GetOrderUseCaseOutput } from '../../GetOrderUseCase';
+import { GetOrder } from '../../../../enterprise-business-rules/__protocols__/GetProcess';
+
 import { GetOrderControllerOutput } from '../../../../interface-adapters/controllers/GetOrderController';
 
 export const makeCreateOrderControllerInput =
@@ -81,7 +77,7 @@ export const makeFakeCreateOrderList = (): any => [
 export const makeGetOrderRepositoryStub =
   (): jest.Mocked<GetOrderRepository> => ({
     getAll: jest.fn().mockResolvedValue(makeFakeCreateOrderList()),
-    getById: jest.fn().mockResolvedValue(makeCreateOrder()),
+    getById: jest.fn().mockResolvedValue(makeFakeCreateOrder()),
   });
 
 export const makeCreateOrderUserStub =
