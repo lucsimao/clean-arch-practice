@@ -1,9 +1,5 @@
 import { GetOrderUseCase } from '../GetOrderUseCase';
-import {
-  makeFakeCreateOrder,
-  makeFakeCreateOrderUseCaseInput,
-  makeGetOrderRepositoryStub,
-} from './helpers/test-helper';
+import { makeGetOrderRepositoryStub } from './helpers/test-helper';
 
 const makeSut = () => {
   const getOrderRepository = makeGetOrderRepositoryStub();
@@ -28,6 +24,7 @@ describe(GetOrderUseCase.name, () => {
 
     it('should return repository result', async () => {
       const { sut } = makeSut();
+
       const result = await sut.getAllOrder();
 
       expect(result).toEqual([
@@ -87,7 +84,6 @@ describe(GetOrderUseCase.name, () => {
 
     it('should throw when repository fails', async () => {
       const { sut, getOrderRepository } = makeSut();
-
       getOrderRepository.getById.mockRejectedValueOnce(
         new Error('repository error')
       );
